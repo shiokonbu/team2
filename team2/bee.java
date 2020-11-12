@@ -19,9 +19,16 @@ public class bee extends Actor
         move(1);
     }
         // Add your action code here.
+
+        if( Greenfoot.isKeyDown( "up" ) ){
+        setRotation(270);
+        move(1);
+    }
+
         if( Greenfoot.isKeyDown( "left" ) ){
             setRotation(180);
             move(1);
         }
+
     }    
 }

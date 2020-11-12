@@ -1,11 +1,11 @@
 #Greenfoot project file
 class.MyWorld.image=black\ background.png
-class.PlayerL.image=alligator.png
-class.PlayerR.image=snake2.png
-editor.fx.0.height=739
-editor.fx.0.width=816
-editor.fx.0.x=552
-editor.fx.0.y=100
+class.PlayerL.image=stick_white.png
+class.PlayerR.image=stick_yellow.png
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 height=1056
 package.numDependencies=0
 package.numTargets=3
