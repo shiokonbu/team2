@@ -18,16 +18,16 @@ public class PlayerL extends Actor
         int x = getX();
         int y = getY();
         // Add your action code here.
-        if( Greenfoot.isKeyDown( "right" ) ){
+        if( Greenfoot.isKeyDown( "d" ) ){
             setLocation(x+speed, y);
         }
-        if( Greenfoot.isKeyDown( "left" ) ){
+        if( Greenfoot.isKeyDown( "a" ) ){
             setLocation(x-speed, y);
         }
-        if( Greenfoot.isKeyDown( "up" ) ){
+        if( Greenfoot.isKeyDown( "w" ) ){
             setLocation(x, y-speed);
         }
-        if( Greenfoot.isKeyDown( "down" ) ){
+        if( Greenfoot.isKeyDown( "s" ) ){
             setLocation(x, y+speed);
         }
     }    
