@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class maru extends Actor
+public class tama extends Actor
 {
     /**
      * Act - do whatever the maru wants to do. This method is called whenever
