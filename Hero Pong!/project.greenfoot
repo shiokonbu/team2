@@ -3,6 +3,7 @@ class.MyWorld.image=black\ background.png
 class.PlayerL.image=stick_white.png
 class.PlayerR.image=stick_yellow.png
 class.maru.image=maru.png
+<<<<<<< HEAD
 class.tyuuou.image=tyuuou.png
 dependency1.from=MyWorld
 dependency1.to=tyuuou
@@ -14,6 +15,20 @@ editor.fx.0.y=154
 height=1056
 package.numDependencies=1
 package.numTargets=5
+=======
+class.start_menu.image=start.png
+class.tama.image=tama.png
+dependency1.from=start_menu
+dependency1.to=MyWorld
+dependency1.type=UsesDependency
+editor.fx.0.height=739
+editor.fx.0.width=816
+editor.fx.0.x=748
+editor.fx.0.y=299
+height=1047
+package.numDependencies=1
+package.numTargets=6
+>>>>>>> b8351050c2ce8085a0595e63567d016d57338cb6
 project.charset=UTF-8
 publish.hasSource=false
 publish.locked=true
@@ -36,35 +51,61 @@ target1.width=80
 target1.x=0
 target1.y=0
 target2.height=50
-target2.name=PlayerL
+target2.name=start_menu
 target2.showInterface=false
 target2.type=ClassTarget
 target2.width=80
 target2.x=0
 target2.y=0
 target3.height=50
+<<<<<<< HEAD
 target3.name=tyuuou
+=======
+target3.name=PlayerL
+>>>>>>> b8351050c2ce8085a0595e63567d016d57338cb6
 target3.showInterface=false
 target3.type=ClassTarget
 target3.width=80
 target3.x=0
 target3.y=0
 target4.height=50
+<<<<<<< HEAD
 target4.name=PlayerR
+=======
+target4.name=tama
+>>>>>>> b8351050c2ce8085a0595e63567d016d57338cb6
 target4.showInterface=false
 target4.type=ClassTarget
 target4.width=80
 target4.x=0
 target4.y=0
 target5.height=50
+<<<<<<< HEAD
 target5.name=MyWorld
+=======
+target5.name=PlayerR
+>>>>>>> b8351050c2ce8085a0595e63567d016d57338cb6
 target5.showInterface=false
 target5.type=ClassTarget
 target5.width=80
 target5.x=0
 target5.y=0
+<<<<<<< HEAD
 version=3.0.0
 width=1936
 world.lastInstantiated=MyWorld
 xPosition=0
+=======
+target6.height=50
+target6.name=MyWorld
+target6.showInterface=false
+target6.type=ClassTarget
+target6.width=80
+target6.x=0
+target6.y=0
+version=3.0.0
+width=974
+world.lastInstantiated=start_menu
+xPosition=953
+>>>>>>> b8351050c2ce8085a0595e63567d016d57338cb6
 yPosition=0
