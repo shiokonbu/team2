@@ -14,6 +14,12 @@ public class tama extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
+      //↓球のゴール判定
+      int x = getX();
+      int y = getY();
+      if(x < 1000){
+          x=0;
+          y=0;
+      }
     }    
 }
