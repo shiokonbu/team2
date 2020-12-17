@@ -19,7 +19,7 @@ public class Player extends Actor
     public void act() 
     {
         // Add your action code here.
-        int speed = 5;
+        int speed = 8;
         int x = getX();
         int y = getY();
         // Add your action code here.
