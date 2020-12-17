@@ -23,7 +23,9 @@ public class PlayerR extends Actor
             setLocation(x+speed, y);
         }
         if( Greenfoot.isKeyDown( "left" ) ){
+            if(x>820){
             setLocation(x-speed, y);
+        }
         }
         if( Greenfoot.isKeyDown( "up" ) ){
             setLocation(x, y-speed);

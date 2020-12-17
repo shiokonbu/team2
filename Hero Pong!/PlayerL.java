@@ -19,7 +19,10 @@ public class PlayerL extends Actor
         int y = getY();
         // Add your action code here.
         if( Greenfoot.isKeyDown( "d" ) ){
-            setLocation(x+speed, y);
+            if(x<780)
+            {
+              setLocation(x+speed, y);
+            }
         }
         if( Greenfoot.isKeyDown( "a" ) ){
             setLocation(x-speed, y);
