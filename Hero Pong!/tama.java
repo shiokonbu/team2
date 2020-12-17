@@ -21,7 +21,7 @@ public class tama extends Actor
       
       getWorld().showText( "x="+x+",y="+y, 100, 50 );
       setRotation(0);
-      move(-10);
+      //move(-10);
       if(x > 1598 || x < 1){
          getWorld().showText( "ゴール", 100,100);
       }
