@@ -25,8 +25,8 @@ public class tama extends Actor
         Player player = (Player)getOneIntersectingObject(Player.class);
         //v_b1+v_p1 = v_b2+v_p1
         if(player != null){
-            xspeed += player.xspeed;
-            yspeed += player.yspeed;
+            xspeed = -xspeed + 2*player.xspeed;//+= player.xspeed;
+            yspeed = -yspeed + 2*player.yspeed;//+= player.yspeed;
         }
         
         if(y < 3 || y > 897){
@@ -39,5 +39,10 @@ public class tama extends Actor
             wallHit = false;
         }
         
-    }    
+        if(x > 1598 || x < 1){
+         getWorld().showText( "ゴール", 100,100);
+        }
+        
+        getWorld().showText( "x="+x+",y="+y, 100, 50 );
+    }      
 }
