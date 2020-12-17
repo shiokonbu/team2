@@ -12,14 +12,19 @@ public class tama extends Actor
      * Act - do whatever the maru wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
+    
     public void act() 
     {
       //↓球のゴール判定
       int x = getX();
       int y = getY();
-      if(x < 1000){
-          x=0;
-          y=0;
+      
+      getWorld().showText( "x="+x+",y="+y, 100, 50 );
+      setRotation(0);
+      move(-10);
+      if(x > 1598 || x < 1){
+         getWorld().showText( "ゴール", 100,100);
       }
+      
     }    
 }
