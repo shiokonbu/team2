@@ -18,6 +18,7 @@ public class tama extends Actor
     boolean wallHit = false;
     public void act() 
     {
+
         // Add your action code here.
         int x = getX();
         int y = getY();
@@ -39,10 +40,17 @@ public class tama extends Actor
             wallHit = false;
         }
         
-        if(x > 1598 || x < 1){
-         getWorld().showText( "ゴール", 100,100);
+        if(x < 1){
+         getWorld().showText( "R得点", 100,100);
+         setLocation(700, 450);
+         xspeed = yspeed = 0;
         }
         
+        if(x > 1598 ){
+         getWorld().showText( "L得点", 100,100);
+         setLocation(900, 450);
+         xspeed = yspeed = 0;
+        }
         getWorld().showText( "x="+x+",y="+y, 100, 50 );
     }      
 }
