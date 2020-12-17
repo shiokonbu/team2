@@ -26,8 +26,8 @@ public class tama extends Actor
         Player player = (Player)getOneIntersectingObject(Player.class);
         //v_b1+v_p1 = v_b2+v_p1
         if(player != null){//5:1 mass
-            xspeed = (int)((-4*xspeed+10*player.xspeed)/6.0);//-xspeed + 2*player.xspeed;//+= player.xspeed;
-            yspeed = (int)((-4*yspeed+10*player.yspeed)/6.0);//-yspeed + 2*player.yspeed;//+= player.yspeed;
+            xspeed = -xspeed + 2*player.xspeed;//+= player.xspeed;
+            yspeed = -yspeed + 2*player.yspeed;//+= player.yspeed;
         }
         
         if(y < 2 || y > 898){

@@ -23,6 +23,7 @@ public class Player extends Actor
         int x = getX();
         int y = getY();
         // Add your action code here.
+        
         if( Greenfoot.isKeyDown( right ) ){
             xspeed = speed;
         }else if(Greenfoot.isKeyDown( left )){
@@ -39,6 +40,6 @@ public class Player extends Actor
             yspeed = 0;
         }
         
-        setLocation(x+xspeed, y+yspeed);
+        if(Math.abs(x+xspeed-800) >20 ) setLocation(x+xspeed, y+yspeed);
     }    
 }
