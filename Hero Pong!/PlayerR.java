@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class PlayerR extends Actor
+public class PlayerR extends Player
 {
     /**
      * Act - do whatever the PlayerR wants to do. This method is called whenever
@@ -14,24 +14,10 @@ public class PlayerR extends Actor
      */
     public void act() 
     {
-        // Add your action code here.
-        int speed = 5;
-        int x = getX();
-        int y = getY();
-        // Add your action code here.
-        if( Greenfoot.isKeyDown( "right" ) ){
-            setLocation(x+speed, y);
-        }
-        if( Greenfoot.isKeyDown( "left" ) ){
-            if(x>820){
-            setLocation(x-speed, y);
-        }
-        }
-        if( Greenfoot.isKeyDown( "up" ) ){
-            setLocation(x, y-speed);
-        }
-        if( Greenfoot.isKeyDown( "down" ) ){
-            setLocation(x, y+speed);
-        }
+        right = "right";
+        left = "left";
+        up = "up";
+        down = "down";
+        super.act();
     }    
 }
