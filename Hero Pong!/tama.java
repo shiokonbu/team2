@@ -12,23 +12,34 @@ public class tama extends Actor
      * Act - do whatever the maru wants to do. This method is called whenever
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
-    int xspeed = 0;
-    int yspeed = 0;
+    double xspeed = 0;
+    double yspeed = 0;
     
     boolean wallHit = false;
+    boolean state = false;
+    
+    int lim = 12;
     public void act() 
     {
-
         // Add your action code here.
         int x = getX();
         int y = getY();
-        setLocation(x+xspeed, y+yspeed);
+        double mRatio = 0.7; //tama/player
+        setLocation((int)(x+xspeed), (int)(y+yspeed));
         Player player = (Player)getOneIntersectingObject(Player.class);
         //v_b1+v_p1 = v_b2+v_p1
-        if(player != null){//5:1 mass
-            xspeed = -xspeed + 2*player.xspeed;//+= player.xspeed;
-            yspeed = -yspeed + 2*player.yspeed;//+= player.yspeed;
+        if(player != null){
+            if(!state){
+                xspeed = ((mRatio-1)*xspeed+2*player.xspeed)/(1+mRatio);
+                yspeed = ((mRatio-1)*yspeed+2*player.yspeed)/(1+mRatio);
+                xspeed = xspeed/sign(xspeed) > lim ? lim * sign(xspeed) : xspeed;
+                yspeed = yspeed/sign(yspeed) > lim ? lim * sign(yspeed) : yspeed;
+                state = true;
+            }
+        }else{
+            state = false;
         }
+        
         
         if(y < 2 || y > 898){
             if(wallHit == false){
@@ -52,5 +63,11 @@ public class tama extends Actor
          xspeed = yspeed = 0;
         }
         getWorld().showText( "x="+x+",y="+y, 100, 50 );
-    }      
+        getWorld().showText( "vx=" + (int)xspeed + ",vy=" + (int)yspeed , 100, 75 );
+    }  
+    
+    int sign(double A){
+        if(A>=0) return 1;
+        else return -1;
+    }
 }
