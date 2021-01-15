@@ -24,22 +24,21 @@ public class tama extends Actor
         // Add your action code here.
         int x = getX();
         int y = getY();
-        double mRatio = 0.7; //tama/player
+        double mRatio = 15; //tama/player
         setLocation((int)(x+xspeed), (int)(y+yspeed));
         Player player = (Player)getOneIntersectingObject(Player.class);
         //v_b1+v_p1 = v_b2+v_p1
+        
         if(player != null){
-            if(!state){
-                xspeed = ((mRatio-1)*xspeed+2*player.xspeed)/(1+mRatio);
-                yspeed = ((mRatio-1)*yspeed+2*player.yspeed)/(1+mRatio);
-                xspeed = xspeed/sign(xspeed) > lim ? lim * sign(xspeed) : xspeed;
-                yspeed = yspeed/sign(yspeed) > lim ? lim * sign(yspeed) : yspeed;
-                state = true;
-            }
+            xspeed = ((mRatio-1)*xspeed+2*player.xspeed)/(1+mRatio);
+            yspeed = ((mRatio-1)*yspeed+2*player.yspeed)/(1+mRatio);
+            xspeed = xspeed/sign(xspeed) > lim ? lim * sign(xspeed) : xspeed;
+            yspeed = yspeed/sign(yspeed) > lim ? lim * sign(yspeed) : yspeed;
+            state = true;
+            player.movePlayer(0,0);
         }else{
             state = false;
         }
-        
         
         if(y < 2 || y > 898){
             if(wallHit == false){
