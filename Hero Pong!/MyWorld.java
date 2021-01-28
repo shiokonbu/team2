@@ -26,4 +26,15 @@ public class MyWorld extends World
         addObject( new tyuuou(), 800, 450 );
 
     }
+    
+    public void gameEnd(int Lpoint, int Rpoint){
+        if(Lpoint > Rpoint) {
+            World endL = new endL();
+            Greenfoot.setWorld( endL );
+        }else{
+            World endR = new endR();
+            Greenfoot.setWorld(endR);
+        }
+    }
+    
 }

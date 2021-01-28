@@ -17,7 +17,8 @@ public class tama extends Actor
     
     boolean wallHit = false;
     boolean state = false;
-    
+    int Lpoint = 0;
+    int Rpoint = 0;
     int lim = 12;
     public void act() 
     {
@@ -54,15 +55,20 @@ public class tama extends Actor
          getWorld().showText( "R得点", 100,100);
          setLocation(700, 450);
          xspeed = yspeed = 0;
+         Rpoint++;
         }
         
         if(x > 1598 ){
          getWorld().showText( "L得点", 100,100);
          setLocation(900, 450);
          xspeed = yspeed = 0;
+         Lpoint++;
         }
-        getWorld().showText( "x="+x+",y="+y, 100, 50 );
-        getWorld().showText( "vx=" + (int)xspeed + ",vy=" + (int)yspeed , 100, 75 );
+        getWorld().showText( "Lpoint = " +Lpoint , 100, 25 );
+        getWorld().showText( "Rpoint = " +Rpoint , 1500, 25 );
+        //getWorld().showText( "x="+x+",y="+y, 100, 50 );
+        //getWorld().showText( "vx=" + (int)xspeed + ",vy=" + (int)yspeed , 100, 75 );
+        if(Lpoint >= 10 || Rpoint >= 10) ((MyWorld)getWorld()).gameEnd(Lpoint, Rpoint);
     }  
     
     int sign(double A){
